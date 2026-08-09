@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser OS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="os-root">
+        <main id="desktop">
+            <div id="desktop-clock" class="widget-card">
+                <div class="widget-top-bar">
+                    <span id="widget-greeting">Good Afternoon</span>
+                    <span id="widget-status-badge"><span class="status-dot"></span> Online</span>
+                </div>
+
+                <div class="widget-main-time">
+                    <span id="widget-hours">00</span><span class="time-colon">:</span><span
+                        id="widget-minutes">00</span>
+                    <span id="widget-ampm">PM</span>
+                </div>
+
+                <div class="widget-progress-container">
+                    <div id="widget-progress-bar"></div>
+                </div>
+
+                <div class="widget-bottom-bar">
+                    <span id="widget-day">Saturday</span>
+                    <span class="bullet-dot">•</span>
+                    <span id="widget-date">08 Aug 2026</span>
+                </div>
+            </div>
+            <div class="desktop-icons">
+                <div class="app-icon" data-app="terminal">
+                    <div class="icon">💻</div>
+                    <span class="label">Terminal</span>
+                </div>
+                <div class="app-icon" data-app="notes">
+                    <div class="icon">📝</div>
+                    <span class="label">Notes</span>
+                </div>
+                <div class="app-icon" data-app="settings">
+                    <div class="icon">⚙️</div>
+                    <span class="label">Settings</span>
+                </div>
+                <div class="app-icon" data-app="paint">
+                    <div class="icon">🎨</div>
+                    <span class="label">Paint</span>
+                </div>
+                <div class="app-icon" data-app="calculator">
+                    <div class="icon">📟</div>
+                    <span class="label">Calculator</span>
+                </div>
+                <div class="app-icon" data-app="rpg">
+                    <div class="icon rpg-icon">
+                        <i class="fa-brands fa-phoenix-framework"></i>
+                    </div>
+                    <span class="label">Dragon Repeller</span>
+                </div>
+            </div>
+        </main>
+
+        <div id="start-menu" class="start-menu hidden">
+            <div class="start-header">
+                <input type="text" id="start-search" placeholder="Search apps..." />
+            </div>
+            <div class="start-apps-grid">
+                <div class="start-app-item" data-app="terminal">
+                    <span class="icon">💻</span>
+                    <span class="name">Terminal</span>
+                </div>
+                <div class="start-app-item" data-app="notes">
+                    <span class="icon">📝</span>
+                    <span class="name">Notes</span>
+                </div>
+                <div class="start-app-item" data-app="settings">
+                    <span class="icon">⚙️</span>
+                    <span class="name">Settings</span>
+                </div>
+                <div class="start-app-item" data-app="paint">
+                    <span class="icon">🎨</span>
+                    <span class="name">Paint</span>
+                </div>
+                <div class="start-app-item" data-app="calculator">
+                    <span class="icon">📟</span>
+                    <span class="name">Calculator</span>
+                </div>
+                <div class="start-app-item" data-app="rpg">
+                    <span class="icon rpg-icon">
+                        <i class="fa-brands fa-phoenix-framework"></i>
+                    </span>
+                    <span class="name">Dragon Repeller</span>
+                </div>
+            </div>
+            <div class="start-footer">
+                <span>WebOS v1.0.0</span>
+            </div>
+        </div>
+
+        <footer id="taskbar">
+            <button id="start-btn" class="taskbar-btn" title="Start Menu">
+                <i class="fa-brands fa-windows"></i>Start
+            </button>
+            <!-- Active Running App Indicators -->
+            <div id="running-apps"></div>
+
+            <!-- System Tray / Clock -->
+            <div id="system-tray">
+                <span id="clock-time">00:00:00 AM</span>
+                <span id="clock-date">00-00-0000</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/windowManager.js"></script>
+    <script src="js/apps/terminal.js"></script>
+    <script src="js/apps/notes.js"></script>
+    <script src="js/apps/settings.js"></script>
+    <script src="js/apps/paint.js"></script>
+    <script src="js/apps/calculator.js"></script>
+    <script src="js/apps/rpg.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
